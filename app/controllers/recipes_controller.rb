@@ -17,10 +17,10 @@ class RecipesController < ApplicationController
     Recipe.create(recipe_params)
     redirect_to recipes_path
   end
-  
-  
-  private 
-  
+
+
+  private
+
   def recipe_params
     params.require(:recipe).permit(
       :title,
@@ -28,7 +28,7 @@ class RecipesController < ApplicationController
         :name,
         :quantity
         ]
-      
+
       )
   end
 
